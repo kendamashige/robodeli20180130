@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+<script src="components/loader.js"></script>
+<link rel="stylesheet" href="components/loader.css">
+<link rel="stylesheet" type="text/css" href="css/base.css">
+<script type="text/javascript" src="JS/jquery-3.2.1.min"></script>
+<script type="text/javascript">
+//スクロールの禁止
+$(function() {
+ $(window).on('touchmove.noScroll', function(e) {
+        e.preventDefault();
+    });
+    $('.close').on('click', function() {
+        $('.loading_box').hide();
+        $(window).off('.noScroll');
+    });
+});
+    						  
+//ボタン押下による音声再生制御				  
+function btnClick(objId) {
+	document.getElementById(objId).play();}
+</script>
+	
+</head>
+<body>
+<div id="wrapper" class="fullheight">
+
+<!--上部の制御パネル-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+  <div id="container_top">
+    <div class="containt_topAndBottom">
+	  <div class="slot">
+        <a href="#" class="square_btn subBtnL" onclick="btnClick('headUp');">口開く</a>
+        <a href="#" class="square_btn subBtnL" onclick="btnClick('headUp');">口閉じ</a>		  
+		<audio id="headUp" preload="auto"><source src="Audio/headUp.wav" type="audio/wav"></audio>
+	  </div>
+	  <div class="slot">
+	    <img src="images/HeadUp.png" id="ImgGoStraight" class="btn"  width="303" height="204" alt="" onclick="btnClick('headUp');">
+        <audio id="headUp" preload="auto"><source src="Audio/headUp.wav" type="audio/wav"></audio>
+	  </div>
+	  <div class="slot">
+        <a href="#" class="square_btn subBtnR" onclick="btnClick('headUp');">瞳開く</a>
+        <a href="#" class="square_btn subBtnR" onclick="btnClick('headUp');">瞳閉じ</a>
+		<audio id="headUp" preload="auto"><source src="Audio/headUp.wav" type="audio/wav"></audio>
+	  </div>
+	</div>
+    <div class="containt_middle">
+	　<img src="images/TurnHeadL.png" class="btn"  width="305" height="137" alt="" onclick="btnClick('headLeft');">
+      <audio id="headLeft" preload="auto"><source src="Audio/headLeft.wav" type="audio/wav"></audio>
+      <img src="images/MoveStop.png" id="ImgMoveStop" class="btn"  width="228" height="103" alt="" onclick="btnClick('headStop');">
+      <audio id="headStop" preload="auto"><source src="Audio/stop.wav" type="audio/wav"></audio>
+      <img src="images/TurnHeadR.png" class="btn"  width="305" height="137" alt="" onclick="btnClick('headRight');">
+      <audio id="headRight" preload="auto"><source src="Audio/headRight.wav" type="audio/wav"></audio>
+    </div>
+    <div class="containt_topAndBottom"> 
+	  <div class="slot">
+        <a href="#" class="square_btn subBtnL jyouhanshin" onclick="btnClick('headUp');">上半身上げ</a>
+        <a href="#" class="square_btn subBtnL jyouhanshin " onclick="btnClick('headUp');">上半身下げ</a>		  
+		<audio id="headUp" preload="auto"><source src="Audio/headUp.wav" type="audio/wav"></audio>
+	  </div>
+	  <div class="slot">
+	    <img src="images/HeadDown.png" id="ImgGoBack" class="btn"  width="303" height="204" alt="" onclick="btnClick('headDown');">
+        <audio id="headDown" preload="auto"><source src="Audio/headDown.wav" type="audio/wav"></audio>
+	  </div>
+	  <div class="slot">
+        <a href="#" class="square_btn subBtnR" onclick="btnClick('headUp');">腰あげ</a>
+        <a href="#" class="square_btn subBtnR" onclick="btnClick('headUp');">腰下げ</a>
+		<audio id="headDown" preload="auto"><source src="Audio/headDown.wav" type="audio/wav"></audio>
+	  </div>
+    </div>
+	  
+<!--真ん中の制御パネル-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+  
+	</div>
+  <div id="container_handPanels">
+    <div id="container_middleLeft" class="box boxL"> <img src="images/LeftHandUp.png" class="btn"  width="137" height="105" alt="" onclick="btnClick('leftHandUp');">
+      <audio id="leftHandUp" preload="auto"><source src="Audio/leftHandUp.wav" type="audio/wav"></audio>
+      <div id="containt_middle"> <img src="images/LeftHandLeft.png" class="handBtnLeft btn"  width="137" height="71" alt="" onclick="btnClick('leftHandToLeft');">
+        <audio id="leftHandToLeft" preload="auto"><source src="Audio/leftHandToLeft.wav" type="audio/wav"></audio>
+        <img src="images/leftHand.png" class="handName" width="52" height="71" alt=""> <img src="images/LeftHandRight.png" class="btn"  width="137" height="71" alt="" onclick="btnClick('leftHandToRight');">
+        <audio id="leftHandToRight" preload="auto"><source src="Audio/leftHandToRight.wav" type="audio/wav"></audio>
+      </div>
+      <div id="containt_bottom"> <img src="images/LeftHandDown.png" class="btn handDown"  width="157" height="102" alt="" onclick="btnClick('leftHandDown');">
+        <audio id="leftHandDown" preload="auto"><source src="Audio/leftHandDown.wav" type="audio/wav"></audio>
+      </div>
+    </div>
+    <div id="spMode"> <a href="spMode.html"><img src="images/spMode.png" id="" class="btn"  width="180" height="180" alt="" onclick="btnClick('spModeOn');"></a>
+      <audio id="spModeOn" preload="auto"><source src="Audio/spModeOn.wav" type="audio/wav"></audio>
+      <img src="images/forcedStop.png" id="img_FoecedStop" class="btn"  width="180" height="63" alt="" onclick="btnClick('forcedStop');">
+      <audio id="forcedStop" preload="auto"><source src="Audio/forcedStop.wav" type="audio/wav"></audio>
+    </div>
+    <div id="container_middleright" class="box">
+      <div id="containt_top"> <img src="images/RightHandUp.png" class="btn"  width="157" height="105" alt="" onclick="btnClick('rightHandUp');">
+        <audio id="rightHandUp" preload="auto"><source src="Audio/rightHandUp.wav" type="audio/wav"></audio></div>
+      <div id="containt_middle"> <img src="images/RightHandLeft.png" class="handBtnLeft btn"  width="137" height="71" alt="" onclick="btnClick('rightHandToLeft');">
+        <audio id="rightHandToLeft" preload="auto"><source src="Audio/rightHandToLeft.wav" type="audio/wav"></audio>
+        <img src="images/rightHand.png" class="handName" width="52" height="71" alt=""> <img src="images/RightHandRight.png" class="btn"  width="137" height="71" alt="" onclick="btnClick('rightHandToRight');">
+        <audio id="rightHandToRight" preload="auto"><source src="Audio/rightHandToRight.wav" type="audio/wav"></audio>
+      </div>
+      <div id="containt_bottom"> 
+		<img src="images/RightHandDonw.png" class="btn handDown"  width="157" height="102" alt="" onclick="btnClick('rightHandDown');">
+        <audio id="rightHandDown" preload="auto"><source src="Audio/rightHandDown.wav" type="audio/wav"></audio>
+      </div>
+    </div>
+  </div>
+  <div class='after'></div>
+	
+<!--下部の制御パネル-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+  <div class="container_buttom">
+   <div class="containt_topAndBottom">
+	  <div class="slot">
+        <a href="#" class="square_btn subBtnL" onclick="btnClick('headUp');">開脚</a>
+        <a href="#" class="square_btn subBtnL" onclick="btnClick('headUp');">閉脚</a>		  
+		<audio id="headUp" preload="auto"><source src="Audio/headUp.wav" type="audio/wav"></audio>
+	  </div>
+	  <div class="slot">
+	    <img src="images/GoStraight.png" id="ImgGoStraight" class="btn"  width="303" height="204" alt="" onclick="btnClick('goStraight');">
+        <audio id="goStraight" preload="auto"><source src="Audio/goStraight.wav" type="audio/wav"></audio>
+	  </div>
+	  <div class="slot">
+        <a href="#" class="square_btn subBtnR" onclick="btnClick('headUp');">立つ</a>
+        <a href="#" class="square_btn subBtnR" onclick="btnClick('headUp');">座る</a>
+		<audio id="headUp" preload="auto"><source src="Audio/headUp.wav" type="audio/wav"></audio>
+	  </div>
+	</div>
+    <div class="containt_middle">
+	  <img src="images/LeftTurn.png" class="btn"  width="305" height="137" alt="" onclick="btnClick('turnLeft');">
+      <audio id="turnLeft" preload="auto"><source src="Audio/turnLeft.wav" type="audio/wav"></audio>
+      <img src="images/MoveStop.png" id="ImgMoveStop" class="btn"  width="228" height="103" alt="" onclick="btnClick('stop');">
+      <audio id="stop" preload="auto"><source src="Audio/stop.wav" type="audio/wav"></audio>
+      <img src="images/RightTurn.png" class="btn"  width="305" height="137" alt="" onclick="btnClick('turnRight');">
+      <audio id="turnRight" preload="auto"><source src="Audio/turnRight.wav" type="audio/wav"></audio>
+    </div>
+    <div class="containt_topAndBottom"> 
+	  <div class="slot">
+        <a href="#" class="square_btn subBtnL lay" onclick="btnClick('headUp');">横になる</a>
+        <a href="#" class="square_btn subBtnL" onclick="btnClick('headUp');">起きる</a>		  
+		<audio id="headUp" preload="auto"><source src="Audio/headUp.wav" type="audio/wav"></audio>
+	  </div>
+	  <div class="slot">
+     <img src="images/GoBack.png" id="ImgGoBack" class="btn"  width="303" height="204" alt="" onclick="btnClick('goBack');">
+      <audio id="goBack" preload="auto"><source src="Audio/goBack.wav" type="audio/wav"></audio>
+	  </div>
+	  <div class="slot">
+        <a href="#" class="square_btn subBtnR" onclick="btnClick('headUp');">仰向け</a>
+        <a href="#" class="square_btn subBtnR lay" onclick="btnClick('headUp');">うつ伏せ</a>
+		<audio id="headDown" preload="auto"><source src="Audio/headDown.wav" type="audio/wav"></audio>
+	  </div>   
+  </div>
+</div>
+</body>
+</html>

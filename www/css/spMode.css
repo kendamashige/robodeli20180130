@@ -1,0 +1,242 @@
+html {
+    height: 100%;
+    background: #FF99CC;
+}
+
+body {
+	text-align: center;
+}
+
+.fullheight {
+    height: 100%;
+}
+
+#wrapper {
+}
+
+#menu_top{
+    text-align: left;
+    height: 575px;
+   /* background: #FFF;色*/
+}
+
+#containt_top{
+    text-align: left;
+}
+
+.menuLists{
+    height: auto;
+    float: left;
+    margin-bottom: 20px;
+}
+
+/* 横長ボタンのデザイン */
+.square_btn{
+    position: relative;
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background: #FF66CC;/*色*/
+    border-radius: 12px;/*角の丸み*/
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+    font-weight: bold;
+    border: solid 3px #FF66CC;/*線色*/
+    /*以下追加要素*/
+    float: left;
+    text-align: center;
+    letter-spacing: 0.2em;
+    width: 300px;
+    height: 65px;
+    color: #FFF;
+    font-size: 4.0em;
+    line-height: 90px;
+    padding: 10px 30px;
+}
+.square_btn:hover {/*ボタンを押したとき*/
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);/*影を小さく*/
+    opacity: 0.5;
+}
+.Left{
+    margin: 0px 20px 0px 30px;
+}
+
+.Right{
+    margin: 0px 20px 0px 30px;
+}
+
+
+.sideBtn{
+    background: #FF99CC;/*色*/
+    width: 265px;
+    height: 50px; 
+    margin: 15px 0px 15px 30px;
+    font-size: 3.0em;
+    line-height: 65px;
+    border: solid 3px #006633;
+}
+
+.title{
+    width: 170px;
+    height: 20px;
+    font-size: 1.6em;
+    letter-spacing: 0.0em;
+    background: #FFF;
+    line-height: 30px;
+    margin-left: 80px;
+    color: #006633;
+}
+.title:hover{
+    -ms-transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);/*下に動く*/
+    box-shadow: none;
+    opacity: 1.0;
+}
+
+.mugon{
+    background: #006633;
+}
+
+.yesNo{
+    font-size: 2.6em;
+    letter-spacing: 0.1em;
+    background: #339933;
+}
+
+.talk{
+    background: #99FFCC;
+    color: #006633;
+
+}
+.erobot{
+    color: #006633;
+    border: solid 3px #CC0066;
+    color: #CC0066;
+}
+.inran{
+    background: #9900CC;
+    border: solid 3px #CC0066;
+}
+
+.normal{
+    font-size: 2.6em;
+    letter-spacing: 0.1em;
+    background: #CC6699;
+    border: solid 3px #CC0066;
+}
+
+.noMove{
+    background: #FF99FF;
+    color: #CC0066;
+    border: solid 3px #CC0066;
+}
+
+/*ボタン説明*/
+.notice{
+    text-align: left;
+    font-size: 1.6em;
+    font-weight: bold;
+    vertical-align: middle;
+    color: #FF0099 ; 
+    width: 500px;
+    height: 72px;
+    background: #FFF;
+    border: solid 3px #FF66CC;/*線色*/
+    padding: 0.25em 0.5em;
+    float: left;
+    line-height: 45px;
+}
+.option{
+    width: 260px;
+    margin-left: 30px;
+    text-align: center;
+    font-size: 2.4em;
+    letter-spacing: 0.1em;
+    line-height: 90px;
+    color: #FFF;
+    background: #66CCFF;
+    border: solid 3px #3366FF;
+}
+
+.opNotice{
+    width: 590px;
+    height: auto;
+    border: solid 3px #3366FF;
+    color: #000;
+}
+
+.menu_Middle{
+}
+
+.sideMenu{
+    width:381px;
+    height: 300px;
+    /*background: #FFF;*/
+    float: left;
+}
+
+.sideMenuLists{
+   text-align: center; 
+}
+
+#spMode {
+	width: 200px;
+	float: left;
+}
+
+.bottom{
+    margin-top: 30px
+}
+
+.voice{
+    width: 50px:
+}
+
+.after {
+	clear: both;
+}
+#container_top{
+    height: 400px;
+    height: 600px;
+    margin-top: 50px;
+}
+#container_bottom{
+    height: 400px;
+    height: 600px;
+    margin-top: 40px;
+}
+
+.underBottom{
+    width: 850px;
+    border-radius: 12px;
+    font-size: 4.5em; 
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+    margin-left: 30px;
+    text-align: center;
+    line-height: 60px;
+}
+
+.shower{
+    background: #996633;
+    border: solid 3px #006633;
+}
+
+.kikan{
+    background: #996633;
+    border: solid 3px #006633;
+}
+#mic{
+    margin-top: 30px;
+}
+
+
+
+
+
+
+
+

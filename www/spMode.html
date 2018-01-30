@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=0.1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  <script src="components/loader.js"></script>
+  <link rel="stylesheet" href="components/loader.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/spMode.css">
+  <script type="text/javascript" src="JS/jquery-3.2.1.min"></script>
+  <script type="text/javascript">
+    //スクロールの禁止
+                        		  
+    $(function() {
+     $(window).on('touchmove.noScroll', function(e) {
+            e.preventDefault();
+        });
+        $('.close').on('click', function() {
+            $('.loading_box').hide();
+            $(window).off('.noScroll');
+        });
+    });
+ 
+
+    
+    //上部メニューボタン					  
+    							  
+    function push_Nameru(){
+    	document.getElementById("btn_Nameru").play();
+    }
+    //SPモード						
+    function switchSpModeOn() {
+    	document.getElementById("spModeOn").play();
+    }
+    //強制停止ボタン  					
+    function forcedStopOn() {
+    	document.getElementById("forcedStop").play();
+    }
+    //音声入力ボタン      				
+    function inputVoice() {
+        alert("ロボ娘に聞こえるよう直接指示を発声してください");
+    }
+    //シャワーボタン 
+    function push_Shower() {
+     myRet = confirm("シャワールームに移動します。よろしいですか？");
+     if ( myRet == true ){
+         alert("入力を受付ました");
+     }else{
+         alert("キャンセルされました");
+     }
+    }
+    //帰還ボタン          			
+    function push_Kikan() {
+     myRet = confirm("すべてのプレイを終え格納庫へ帰還します。よろしいですか？");
+     if ( myRet == true ){
+         alert("本日のご利用、誠にありがとうございました。リモコンを女の娘にご返却ください。");
+     }else{
+         alert("キャンセルされました");
+     }
+    }
+  </script>
+</head>
+<body>
+  <div id="wrapper spModePage" class="fullheight">
+    <div id="container_top">
+      <div id="menu_top">
+        <div class="menuLists">
+          <a href="#" class="square_btn Left" onclick="push_Nameru();" >舐める</a>
+          <div class="notice">目線の先あるいはあなたが指差した<br/>箇所を舐めます</div>
+        </div>
+        <div class="menuLists">
+          <a href="#" class="square_btn Left" onclick="push_Nigiru();" >握る</a>
+          <div class="notice">目線の先あるいはあなたが指差した<br/>箇所を握ります</div>
+        </div>
+        <div class="menuLists">
+          <a href="#" class="square_btn Left" onclick="push_Nameru();" >キス</a>
+          <div class="notice">目線の先あるいはあなたが指差した<br/>箇所にキスします</div>
+        </div>
+        <div class="menuLists">
+          <a href="#" class="square_btn Left" onclick="push_Nigiru();" >６９</a>
+          <div class="notice">69プログラムを実行します<br/>体制の細かい指定は音声入力をご利用下さい</div>
+        </div>
+        <div class="menuLists">
+          <a href="#" class="square_btn Left" onclick="push_Nigiru();" >聖水</a>
+          <div class="notice">聖水を放出します<br/>※体調により実行できないこともあります</div>
+        </div>
+      </div>
+      <div id="menu_Middle">      
+        <div class="sideMenu" >  
+            <div class="sidMenuLists">
+              <a href="#" class="square_btn Left sideBtn title" onclick="push_Nigiru();" >ロボット指数</a>
+              <a href="#" class="square_btn Left sideBtn mugon" onclick="push_Nigiru();" >無言モード</a>
+              <a href="#" class="square_btn Left sideBtn yesNo" onclick="push_Nigiru();" >はい/いいえ</a>
+              <a href="#" class="square_btn Left sideBtn talk" onclick="push_Nigiru();" >会話モード</a>
+            </div>
+        </div>
+
+        <div id="spMode"> 
+
+            <a href="index.html"><img src="images/normalMode.png" class="btn" ontouchstart="" width="180" height="180" alt="" onclick="switchSpModeOn();"></a>
+            <audio id="spModeOn" preload="auto">
+            <source src="Audio/spModeOn.wav" type="audio/wav">
+            </audio>
+            <a href="#"><img src="images/img_Mic.png" id="mic"  width="180" height="180" alt="" onclick="inputVoice();"></a>
+  
+        </div>
+      
+        <div class="sideMenu" >  
+            <div class="sideMenuLists">
+              <a href="#" class="square_btn Right sideBtn title erobot" onclick="push_Nigiru();">エロボットLv</a>
+              <a href="#" class="square_btn Right sideBtn inran" onclick="push_Nigiru();">淫乱ロボ</a>
+              <a href="#" class="square_btn Right sideBtn normal" onclick="push_Nigiru();">ちょいエロボ</a>
+              <a href="#" class="square_btn Right sideBtn noMove" onclick="push_Nigiru();">停止ロボ</a>
+            </div>
+        </div>
+      
+    　</div>
+    　
+
+    
+    <div class='after'></div>
+    
+    <div id="container_bottom">
+      <div id="menu_top">
+        <div class="menuLists">
+          <div class="notice option">有料オプション</div>
+          <div class="notice opNotice">事前にお申込みでないオプションを選択する場合は別途<br/>追加料金が発生します。</div>
+        </div>
+        
+      <div id="menu_Middle">      
+        <div class="sideMenu" >  
+            <div class="sidMenuLists">
+              <a href="#" class="square_btn Left sideBtn irama" onclick="push_Irama();" >イラマチオ</a>
+              <a href="#" class="square_btn Left sideBtn gokkun" onclick="push_Gokkun();" >ごっくん</a>
+              <a href="#" class="square_btn Left sideBtn af" onclick="push_AF();" >AF</a>
+            </div>
+        </div>
+        
+
+      <div id="menu_Middle">      
+        <div class="sideMenu" >  
+            <div class="sidMenuLists">
+ 
+              <a href="#" class="square_btn Left sideBtn nyou" onclick="push_NyoSower();" >尿シャワー</a>
+              <a href="#" class="square_btn Left sideBtn inNyou" onclick="push_Innyo();" >飲尿</a>
+              <a href="#" class="square_btn Left sideBtn outo" onclick="push_Outo();" >嘔吐</a>
+            </div>
+        </div>
+
+        <div class="menuLists">
+          <a href="#" class="square_btn Left shower" onclick="push_Shower();" >シャワー</a>
+          <div class="notice ">即尺オプションを選択していない場合は<br/>必ず最初に選択して下さい</div>
+        </div>
+        <div class="menuLists">
+          <a href="#" class="square_btn Left kikan" onclick="push_Kikan();">帰還</a>
+          <div class="notice ">帰り支度を行ない、格納庫へ帰還します</div>
+        </div>
+        
+      </div>
+    </div>
+</div>
+</body>
+</html>
